@@ -38,6 +38,9 @@ android {
                 storePassword = keystoreProperties.getProperty("storePassword")
                 keyAlias = keystoreProperties.getProperty("keyAlias")
                 keyPassword = keystoreProperties.getProperty("keyPassword")
+                // v1 JAR signing is only needed below Android 7, which minSdk rules out.
+                enableV2Signing = true
+                enableV3Signing = true
             }
         }
     }
